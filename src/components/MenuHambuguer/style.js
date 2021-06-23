@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
-import { FaTimes } from 'react-icons/fa'
+
+
 
 
 export const HamburguerContainer = styled.aside`
@@ -21,8 +22,15 @@ export const HamburguerContainer = styled.aside`
     }
 `;
 
-export const CloseIcon = styled(FaTimes)`
+export const CloseIcon = styled.div`
     color: #fff;
+    transition: 0.2s ease-in-out;
+   
+    &:hover{
+        transform:rotate(90deg);
+        transition: 0.2s ease-in-out;
+    }
+    
 `;
 
 export const Icon = styled.div`
@@ -34,16 +42,30 @@ export const Icon = styled.div`
     font-size: 2rem;
     cursor: pointer;
     outline: none;
+    
+    
 `;
 
 export const HamburguerMenu = styled.div`
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 80px);
+    grid-template-columns: auto;
+    grid-template-rows: repeat(auto, 30px);
+    grid-row-gap: 20px;
     text-align: center;
+    padding: 30px;
+    overflow: scroll;
+    border-top: 1px solid white;
+    margin-top: 82px;
+    &::-webkit-scrollbar{
+        width: 0;
+        background: transparent;
+    }
+    max-height: 90%;
+    
+
 
     @media screen and (max-width: 480px){
-        grid-template-rows: repeat(3, 60px);
+        grid-template-rows: repeat(auto, 20px);
     }
 `;
 
@@ -57,9 +79,13 @@ export const HamburguerLink = styled(Link)`
     transition: 0.2s ease-in-out;
     color: #fff;
     cursor: pointer;
+    padding: 10px;
+   
+    
 
     &:hover{
         color: #BC6FF1;
+        transform: scale(1.25);
         transition: 0.2 ease-in-out;
     }
 `;

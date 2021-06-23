@@ -1,0 +1,6 @@
+Terminar crud
+As outras 2 páginas
+interação com o carrinho
+barra de pesquisa
+footer
+heroku

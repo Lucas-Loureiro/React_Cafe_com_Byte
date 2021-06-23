@@ -53,4 +53,21 @@ export const Hamburguer = styled( GiHamburgerMenu )`
 `;
 
 
+export const Input = styled.input`
+   display: flex;
+   width: 40%;
+   height: 100%;
+   padding: 10px;
+   justify-content: center;
+`;
+
+export const Form = styled.form`
+    display: flex;
+    background: #52057B;
+    justify-content: center;
+    padding: 5px;
+    height: 40px;
+`;
+
+
 

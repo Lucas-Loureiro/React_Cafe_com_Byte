@@ -1,13 +1,15 @@
-import { BrowserRouter } from 'react-router-dom';
-import { NavBar } from './components/Header/index';
+import { BrowserRouter, Route } from 'react-router-dom';
+import { Home } from './pages/Home';
 import { GlobalStyle } from './styles/global';
+import { NavBar } from './components/Header'
 
 function App() {
   return (
-      <BrowserRouter>
-        <GlobalStyle />
-        <NavBar />
-      </BrowserRouter>
+    <BrowserRouter>
+      <NavBar />
+      <GlobalStyle />
+      <Route path="/" exact component={Home} />
+    </BrowserRouter>
   );
 }
 
