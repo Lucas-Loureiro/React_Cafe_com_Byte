@@ -81,6 +81,9 @@ export const Cart = styled.button`
   border-radius: 50%;
   width: 100px;
   height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: #52057B;
   position: fixed;
   bottom: 5%;
@@ -88,6 +91,8 @@ export const Cart = styled.button`
   font-size: 150%;
   color: white;
   transition: 0.2 ease-out;
+
+  
 
   &:hover{
     background: #BC6FF1;
@@ -98,3 +103,4 @@ export const Cart = styled.button`
   
   
 `;
+
