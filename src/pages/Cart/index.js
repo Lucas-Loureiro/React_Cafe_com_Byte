@@ -1,15 +1,22 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useContext } from "react";
 import { CartContext } from "../../components/CartProvider";
-import api from '../../services/api'
 
-export function Cart(){
-    const {cart, addItem, removeItem, clearCart} = useContext(CartContext)
+import { CartContainer, CardCart, CardProdutos, CardResult } from './style'
 
+export function Cart() {
+
+
+    const { cart, addItem, removeItem, clearCart } = useContext(CartContext)
+    
     return (
-        <div>
-            <div>
-            
-            </div>
-        </div>
+        <CartContainer>
+            <CardCart>
+                <CardProdutos>Produto1</CardProdutos>
+            </CardCart>
+            <CardResult>
+                <p>Valor Total:</p>
+            </CardResult>
+        </CartContainer>
+
     )
 }

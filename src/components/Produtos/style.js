@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const ProdutosContainer = styled.div`
@@ -76,7 +77,7 @@ export const ProdutoButton = styled.button`
 `;
 
 
-export const Cart = styled.button`
+export const Cart = styled(Link)`
   border: transparent;
   border-radius: 50%;
   width: 100px;
@@ -86,11 +87,12 @@ export const Cart = styled.button`
   align-items: center;
   background: #52057B;
   position: fixed;
-  bottom: 5%;
+  bottom: 9%;
   right: 5%;
   font-size: 150%;
   color: white;
   transition: 0.2 ease-out;
+  text-decoration: none;
 
   
 

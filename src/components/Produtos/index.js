@@ -32,12 +32,12 @@ export function Produtos() {
         fetchData();
     }, [])
 
-    function countCart() {
+    function countCart(nome, descricao, valorUnitario, url) {
         setCartItems(cartItems + 1)
-        addItem(produtos.nome,produtos.descricao, produtos.valorUnitario, produtos.url)
+        addItem(nome, descricao, valorUnitario, url)
         console.log(cart)
     }
-    
+
 
 
 
@@ -54,7 +54,7 @@ export function Produtos() {
                                     <ProdutoTitle>{produto.nome}</ProdutoTitle>
                                     <ProdutoDesc>{produto.descricao}</ProdutoDesc>
                                     <ProdutoPrice>$ {produto.valorUnitario}</ProdutoPrice>
-                                    <ProdutoButton onClick={countCart}>Adicionar ao Carrinho</ProdutoButton>
+                                    <ProdutoButton onClick={() => countCart(produto.nome, produto.descricao, produto.valorUnitario, produto.url)}>Adicionar ao Carrinho</ProdutoButton>
                                 </ProdutoInfo>
                             </ProdutoCard>
                         );
@@ -63,7 +63,7 @@ export function Produtos() {
 
             </ProdutoWrapper>
 
-            <Cart ><IoCartOutline />{cartItems}</Cart>
+            <Cart to="/carrinho"><IoCartOutline />{cartItems}</Cart>
 
         </ProdutosContainer >
 
