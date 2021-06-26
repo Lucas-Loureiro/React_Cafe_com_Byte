@@ -20,6 +20,8 @@ import { CartContext } from "../CartProvider";
 export function Produtos() {
     const [produtos, setProdutos] = useState([]);
     const [cartItems, setCartItems] = useState(0);
+    const [quantidadeTotal, setQuantidadeTotal] = useState(0)
+
     const { cart, addItem, removeItem, clearCart } = useContext(CartContext)
 
     useEffect(() => {
@@ -32,10 +34,20 @@ export function Produtos() {
         fetchData();
     }, [])
 
-    function countCart(nome, descricao, valorUnitario, url) {
+    useEffect(() => {
+        var soma = cart.reduce(function (accumulator, currentValue) {
+            return accumulator + currentValue.quantidade;
+        }, 0);
+        setQuantidadeTotal(soma)
+    }, [cartItems])
+
+
+    function countCart(nome, descricao, valorUnitario, url, id) {
         setCartItems(cartItems + 1)
-        addItem(nome, descricao, valorUnitario, url)
-        console.log(cart)
+        addItem(nome, descricao, valorUnitario, url, id)
+
+
+
     }
 
 
@@ -54,7 +66,7 @@ export function Produtos() {
                                     <ProdutoTitle>{produto.nome}</ProdutoTitle>
                                     <ProdutoDesc>{produto.descricao}</ProdutoDesc>
                                     <ProdutoPrice>$ {produto.valorUnitario}</ProdutoPrice>
-                                    <ProdutoButton onClick={() => countCart(produto.nome, produto.descricao, produto.valorUnitario, produto.url)}>Adicionar ao Carrinho</ProdutoButton>
+                                    <ProdutoButton onClick={() => countCart(produto.nome, produto.descricao, produto.valorUnitario, produto.url, produto.id)}>Adicionar ao Carrinho</ProdutoButton>
                                 </ProdutoInfo>
                             </ProdutoCard>
                         );
@@ -63,7 +75,7 @@ export function Produtos() {
 
             </ProdutoWrapper>
 
-            <Cart to="/carrinho"><IoCartOutline />{cartItems}</Cart>
+            <Cart to="/carrinho"><IoCartOutline />{quantidadeTotal}</Cart>
 
         </ProdutosContainer >
 

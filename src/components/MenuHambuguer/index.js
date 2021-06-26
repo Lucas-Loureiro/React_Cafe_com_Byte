@@ -7,6 +7,7 @@ import {
     CloseIcon,
     HamburguerMenu,
     HamburguerLink,
+    ButtonEdit
 } from './style'
 
 import api from '../../services/api'
@@ -39,11 +40,13 @@ const HamburguerNav = ({ isOpen, toggle }) => {
                 {
                     categorias.map(categoria => {
                         return (
-                            <HamburguerLink to="/" key={categoria.id}>{categoria.nome}</HamburguerLink>
+                            <HamburguerLink  key={categoria.id}>{categoria.nome}</HamburguerLink>
+                            
                         )
                     })
                 }
             </HamburguerMenu>
+            <ButtonEdit to="/crud">CRUD Categoria/Produto</ButtonEdit>
         </HamburguerContainer>
     );
 };

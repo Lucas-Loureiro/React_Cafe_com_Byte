@@ -3,15 +3,15 @@ import styled from 'styled-components'
 export const CardCart = styled.div`
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: repeat(auto, 30px);
-    grid-row-gap: 40px;
+    grid-template-rows: repeat(1000, 90px);
+    grid-row-gap: 50px;
     text-align: center;
     padding: 20px;
     overflow: scroll;
     background: #fff;
-    margin: auto;
     margin-top: 82px;
-    width: 40%;
+    margin: auto;
+    width: 70%;
     height: 600px;
     border-radius: 20px;
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 10px 0px, rgba(14, 30, 37, 0.32) 0px 2px 10px 0px;
@@ -19,38 +19,68 @@ export const CardCart = styled.div`
         width: 0;
         background: transparent;
     }
+    #clear{
+        width: 100%;
+        height: 30px;
+        background-color: #52057B;
+        color: #fff;
+        border: 0;
+        border-radius: 6px;
+        transition: 0.2s;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+        text-align: center;
+        margin: 10px 0;
+        padding: 5px;
+        font-size: 16px;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover{
+            background-color: #BC6FF1;
+            color: #52057B;
+        }
+    }
     
     
 `;
 
 export const CartContainer = styled.div`
-   display: flex;
+   display: grid;
+   padding: 20px;
+   
 `;
 
 export const CardProdutos = styled.div`
    display: flex;
    background-color: white;
    border: 1px solid #ebebeb;
-   height: 30px;
    border-radius: 40px;
    justify-content: center;
    align-items: center;
-   transition: 0.2 ease-in-out;
    padding: 10px;
-   &:hover{
-    transform: scale(0.9);
-    transition: 0.2 ease-in-out;
+   width: auto;
+   img{
+       border-radius: 20px;
+       width: 100px;
+      
+   }
+   button{
+       color: red;
+       margin-left: auto;
+       border: none;
+       background: transparent;
+       font-size: 30px;
    }
 `;
 export const CardResult = styled.div`
     display: flex;
     text-align: center;
-    padding: 70px;
+    padding: 10px;
     background: #fff;
     margin: auto;
-    margin-top: 550px;
-    margin-left: 0.5px;
-    width: 10%;
+    width: 18%;
     height: 100px;
     justify-content: center;
     align-items: center;

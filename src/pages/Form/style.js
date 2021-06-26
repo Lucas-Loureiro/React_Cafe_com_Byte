@@ -65,7 +65,7 @@ export const CardCategorias = styled.div`
     background: #fff;
     margin: auto;
     margin-top: 82px;
-    width: auto;
+    width: 70%;
     height: 600px;
     border-radius: 20px;
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 10px 0px, rgba(14, 30, 37, 0.32) 0px 2px 10px 0px;

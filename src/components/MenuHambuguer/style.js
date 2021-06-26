@@ -69,7 +69,7 @@ export const HamburguerMenu = styled.div`
     }
 `;
 
-export const HamburguerLink = styled(Link)`
+export const HamburguerLink = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
@@ -89,4 +89,22 @@ export const HamburguerLink = styled(Link)`
         transition: 0.2 ease-in-out;
     }
 `;
+export const ButtonEdit = styled(Link)`
+    background-color: #BC6FF1;
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 20px;
+    border: 1px solid transparent;
+    transition: 0.2 ease-in-out;
+    color: #511281;
+    &:hover{
+        background-color: #511281;
+        color: #BC6FF1;
+        border-color: #BC6FF1;
+        transition: 0.2 ease-in-out;
+    }
+`;
+
 

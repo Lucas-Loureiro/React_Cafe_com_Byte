@@ -28,9 +28,11 @@ export const ProdutoCard = styled.div`
 `;
 
 export const ProdutoImg = styled.img`
+  display: flex;
   height: 200px;
-  min-width: 200px;
   max-width: 100%;
+  min-width: auto;
+  margin: auto;
   border-radius: 20px;
   
 `;

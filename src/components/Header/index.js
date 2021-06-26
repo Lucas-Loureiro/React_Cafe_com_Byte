@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Nav, NavLink, NavIcon, Hamburguer, Input, Form } from './styles'
+import { Nav, NavLink, NavIcon, Hamburguer } from './styles'
 import HamburguerNav from '../MenuHambuguer/index'
 
 
@@ -21,9 +21,7 @@ export function NavBar() {
                 </NavIcon>
             </Nav>
             <HamburguerNav isOpen={isOpen} toggle={toggle} />
-            <Form>
-                <Input type="text" placeholder="Buscar..."></Input>
-            </Form>
+            
         </div>
     )
 }
